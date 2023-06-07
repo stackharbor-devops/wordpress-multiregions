@@ -18,7 +18,7 @@ var perEnv = "environment.maxnodescount",
       extIPperNode = "environment.externalip.maxcount.per.node";
 var   nodesPerEnvMin = 9,
       nodesPerGroupMin = 3,
-      maxCloudlets = 16,
+      maxCloudlets = 96,
       markup = "", cur = null, text = "used", prod = true, litespeed = true;
 
 var settings = jps.settings;
