@@ -2,7 +2,7 @@ jpsType: update
 id: async-geo-replication
 name: Async Geo Replication
 description: Async Geo Replication
-baseUrl: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4
+baseUrl: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-5
 
 globals:
   master: ${settings.master:false}
@@ -15,7 +15,7 @@ globals:
   monitor_user: ${settings.monitor_user}
   monitor_pass: ${settings.monitor_pass}
   cluster_name: ${settings.cluster_name:false}
-  db_cluster_url: https://raw.githubusercontent.com/stackharbor-devops/mysql-cluster/sh-4-v2.4.0
+  db_cluster_url: https://raw.githubusercontent.com/stackharbor-devops/mysql-cluster/sh-5-v2.4.0
   
 onInstall:
   - if ('${globals.pre_install}' == 'true'):

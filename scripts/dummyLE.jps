@@ -5,7 +5,7 @@ id: letsencrypt-ssl-addon
 
 name: Let's Encrypt Free SSL
 homepage: https://github.com/jelastic-jps/lets-encrypt
-baseUrl: https://raw.githubusercontent.com/stackharbor-devops/lets-encrypt/sh-4
+baseUrl: https://raw.githubusercontent.com/stackharbor-devops/lets-encrypt/sh-5
 logo: images/lets-encrypt.png
 
 description:
