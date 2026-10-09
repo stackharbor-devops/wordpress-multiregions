@@ -2,7 +2,7 @@ jpsType: update
 id: geo-galera-manager
 name: Geo Galera Cluster Manager
 description: Geo Galera Cluster Manager
-baseUrl: https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master
+baseUrl: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4
 
 globals:
   db_cluster_url: ${settings.db_cluster_url}

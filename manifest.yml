@@ -8,8 +8,8 @@ categories:
 description: 
   text: Highly-available and reliable WordPress cluster setup with automatic multi-region distribution. The package creates interconnected WordPress sub clusters across several regions ensuring the highest uptime and lowest latency.
   short: Enterprise-grade WordPress Cluster with automatic distribution across several regions.
-logo: https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master/images/82dark-back-01.svg
-baseUrl: https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master
+logo: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4/images/82dark-back-01.svg
+baseUrl: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4
 
 onBeforeInit: /scripts/settings.js?_r=${fn.random}
 
@@ -37,7 +37,7 @@ settings:
                         <li>Primary node at Region 2 by default performs reads operations but starts handling writes if initial primary database becomes unavailable<br>
                         <li>Replica node at Region 3 is used for reads operations only<br>
                      </ul>
-                       <img width='587' height='480' src='https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master/images/wp-geo-mm-white-1-bl.svg?sanitize=true'> 
+                       <img width='587' height='480' src='https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4/images/wp-geo-mm-white-1-bl.svg?sanitize=true'> 
           - value: sync
             caption: Sync Galera Distribution
             tooltip: <h2>Galera Cluster</h2>
@@ -48,7 +48,7 @@ settings:
                         <li>Region 2 and 3 each includes 2 primary database nodes<br>
                         <li>All Galera Cluster nodes perform reads and writes operation<br>
                      </ul>
-                      <img width='580' height='400' src='https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master/images/wp-geo-galera-white-1-bl.svg?sanitize=true'>
+                      <img width='580' height='400' src='https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4/images/wp-geo-galera-white-1-bl.svg?sanitize=true'>
                       
       showIf:
         async:
@@ -156,11 +156,11 @@ settings:
       value: 1
       markup:
 mixins:
- - https://raw.githubusercontent.com/jelastic-jps/wordpress-cluster/master/configs/vers.yaml
+ - https://raw.githubusercontent.com/stackharbor-devops/wordpress-cluster/sh-4/configs/vers.yaml
 
 globals:
-  wp_cluster_url: https://raw.githubusercontent.com/jelastic-jps/wordpress-cluster/v3.0.0
-  db_cluster_url: https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/v3.0.0
+  wp_cluster_url: https://raw.githubusercontent.com/stackharbor-devops/wordpress-cluster/sh-4-v3.0.0
+  db_cluster_url: https://raw.githubusercontent.com/stackharbor-devops/mysql-cluster/sh-4-v3.0.0
   galera_server_id: ${fn.random}
   db_user: jelastic-${fn.random}
   db_pass: ${fn.password(10)}
@@ -241,7 +241,7 @@ onInstall:
     - setGlobals:
         protocol: https      
     - install:
-        jps: https://github.com/jelastic-jps/lets-encrypt/blob/stage/manifest.jps?_r=${fn.random}
+        jps: https://github.com/stackharbor-devops/lets-encrypt/blob/sh-4-stage/manifest.jps?_r=${fn.random}
         envName: ${settings.envName}-1
         nodeGroup: bl
         skipEmail: true

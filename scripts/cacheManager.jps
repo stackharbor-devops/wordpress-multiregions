@@ -3,7 +3,7 @@ id: wordpress-multiregion-cache-manager-addon
 name: WordPress Multiregion Cache Manager Add-on
 description: WordPress Multiregion Cache Manager Add-on
 
-baseUrl: https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master
+baseUrl: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4
 
 globals:
   setup_cache_replication: ${settings.setup_cache_replication:false}

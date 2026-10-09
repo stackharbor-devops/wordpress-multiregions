@@ -28,7 +28,7 @@ Click the **REQUEST INSTALLATION** button below and fill out the form within the
 
 [![Request Installation](images/request-installation.png)](https://jelastic.com/managed-auto-scalable-clusters-for-business/#multi-region-wordpress)
 
-If you are already registered at Jelastic, you can deploy this cluster by importing the  [the package manifest raw link](https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master/manifest.yml) within the dashboard.
+If you are already registered at Jelastic, you can deploy this cluster by importing the  [the package manifest raw link](https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4/manifest.yml) within the dashboard.
  
 ## Installation Process
 

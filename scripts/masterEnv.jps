@@ -2,7 +2,7 @@ jpsType: update
 id: wordpress-multiregion-master-manager-addon
 name: WordPress Multiregion Master Manager Add-on
 description: WordPress Multiregion Master Manager Add-on
-baseUrl: https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master
+baseUrl: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4
 
 onBeforeStop:
   - forEach(i:nodes.sqldb):
@@ -16,7 +16,7 @@ onAfterBindSSL:
 onAfterInstallAddon [nodeGroup:bl, id:cdn]:
   - getClusterEnvs
   - installCDN
-  - install: https://raw.githubusercontent.com/jelastic-jps/wordpress-cluster/v3.0.0/scripts/setupCDN.jps
+  - install: https://raw.githubusercontent.com/stackharbor-devops/wordpress-cluster/sh-4-v3.0.0/scripts/setupCDN.jps
  
 onAfterInstallAddon [nodeGroup:bl, id:letsencrypt-ssl-addon]:
   - importGlobalsFromNodeGroup: bl

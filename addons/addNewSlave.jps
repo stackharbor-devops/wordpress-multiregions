@@ -2,7 +2,7 @@ jpsType: update
 id: wordpress-multiregion-new-slave-adding
 name: WordPress Multiregion New Slave Adding
 description: WordPress Multiregion New Slave Adding
-baseUrl: https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master
+baseUrl: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4
 
 settings:
   fields:
@@ -16,7 +16,7 @@ settings:
         isActive: true
 
 globals:
-  wp_cluster_url: https://raw.githubusercontent.com/jelastic-jps/wordpress-cluster/v3.0.0
+  wp_cluster_url: https://raw.githubusercontent.com/stackharbor-devops/wordpress-cluster/sh-4-v3.0.0
 
 onInstall:
   - getClusterEnvs
@@ -92,7 +92,7 @@ actions:
 
   initialNewGaleraCluster:
     - install:
-        jps: https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master/scripts/geo_galera.jps?_r=${fn.random}
+        jps: https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4/scripts/geo_galera.jps?_r=${fn.random}
         envName: ${globals.envName}-${globals.nextIndex}
         settings:
           path: https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/v2.3.0
@@ -122,7 +122,7 @@ actions:
         galera_nodes_address = galera_nodes_address.slice(0, -1);
         for (var i = 0, n = envs.length; i < n; i ++) {
           actions.push({
-            jps: "https://raw.githubusercontent.com/jelastic-jps/wordpress-multiregions/master/scripts/geo_galera.jps?_r=${fn.random}",
+            jps: "https://raw.githubusercontent.com/stackharbor-devops/wordpress-multiregions/sh-4/scripts/geo_galera.jps?_r=${fn.random}",
             envName: envs[i],
             settings: {
               path: "https://raw.githubusercontent.com/jelastic-jps/mysql-cluster/v2.3.0",
